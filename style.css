@@ -1,0 +1,78 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+	margin:70px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-image: url("img/logo.png");
+  padding: 100px;
+  border-bottom:3px solid gray;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 235px;
+    background-color: #f1f1f1;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #1E90FF;
+    color: white;
+}
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 15%;
+  height: 500px; /* only for demonstration, should be removed */
+  border-left:3px solid gray;
+  border-right:3px solid gray;
+  border-bottom:3px solid gray;
+  background: #f1f1f1;
+  padding: 20px;
+}
+/* Style the list inside the menu */
+
+article {
+  float: left;
+  padding: 20px;
+  width: 85%;
+  background-color: #f1f1f1;
+  height: 500px; /* only for demonstration, should be removed */
+  border-bottom:3px solid gray;
+  border-right:3px solid gray;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-image: url("img/bottom.png");
+  padding: 80px;
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
